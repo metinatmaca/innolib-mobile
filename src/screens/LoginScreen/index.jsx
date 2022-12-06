@@ -14,6 +14,7 @@ import Button from 'components/atom/Button'
 import { AuthContext } from 'contexts/AuthContext'
 import { AUTHROUTES } from 'constants/AuthRoutes'
 import { useNavigation } from '@react-navigation/native'
+import { t } from 'i18next'
 
 const LoginScreen = () => {
 	const passwordRef = useRef()
@@ -73,17 +74,17 @@ const LoginScreen = () => {
 				style={styles.container}
 				behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
 			>
-				<Text style={styles.titleTop}>Welcome,</Text>
-				<Text style={styles.titleBottom}>Glad to see you!</Text>
+				<Text style={styles.titleTop}>{t('login.welcome')}</Text>
+				<Text style={styles.titleBottom}>{t('login.glad')}</Text>
 				<View style={styles.labelContainer}>
-					<Text style={styles.label}>Email:</Text>
+					<Text style={styles.label}>{t('login.email')}</Text>
 				</View>
 				<TextInput
 					value={email}
 					onChangeText={handleEmailChange}
 					style={styles.inputEmail}
 					mode={'flat'}
-					placeholder={'Email'}
+					placeholder={t('login.emailPlaceholder')}
 					error={errorState.email}
 					activeUnderlineColor={'#8b13a1'}
 					textColor={'black'}
@@ -102,7 +103,7 @@ const LoginScreen = () => {
 					blurOnSubmit={false}
 				/>
 				<View style={styles.labelContainer}>
-					<Text style={styles.label}>Password:</Text>
+					<Text style={styles.label}>{t('login.password')}</Text>
 				</View>
 				<TextInput
 					ref={passwordRef}
@@ -110,7 +111,7 @@ const LoginScreen = () => {
 					onChangeText={handlePasswordChange}
 					style={styles.inputPassword}
 					mode={'flat'}
-					placeholder={'Password'}
+					placeholder={t('login.passwordPlaceholder')}
 					error={errorState.password}
 					activeUnderlineColor={'#8b13a1'}
 					textColor={'black'}
@@ -138,7 +139,7 @@ const LoginScreen = () => {
 				<View style={styles.forgotPasswordContainer}>
 					<TouchableOpacity>
 						<Text style={styles.forgotPasswordText}>
-							Forgot Password?
+							{t('login.forgotPassword')}
 						</Text>
 					</TouchableOpacity>
 				</View>
@@ -149,7 +150,7 @@ const LoginScreen = () => {
 					disabled={!email || !password}
 					style={styles.loginButton}
 				>
-					<Text style={styles.buttonText}>Login</Text>
+					<Text style={styles.buttonText}>{t('login.login')}</Text>
 				</Button>
 				<View style={styles.bottomButtonContainer}>
 					<TouchableOpacity
@@ -157,10 +158,10 @@ const LoginScreen = () => {
 						onPress={navigateToSignup}
 					>
 						<Text style={styles.bottomButtonText}>
-							Don't have an account?{' '}
+							{t('login.dontHaveAccount')}
 						</Text>
 						<Text style={styles.bottomButtonTextBold}>
-							Sign Up Now
+							{t('login.signUpNow')}
 						</Text>
 					</TouchableOpacity>
 				</View>

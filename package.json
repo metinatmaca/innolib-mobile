@@ -12,7 +12,9 @@
 	"dependencies": {
 		"@react-navigation/native": "^6.0.16",
 		"@react-navigation/stack": "^6.3.7",
+		"i18next": "^22.0.8",
 		"react": "18.1.0",
+		"react-i18next": "^12.1.0",
 		"react-native": "0.70.6",
 		"react-native-gesture-handler": "^2.8.0",
 		"react-native-paper": "^5.0.0-rc.10",

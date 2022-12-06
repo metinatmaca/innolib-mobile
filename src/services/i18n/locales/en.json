@@ -1,0 +1,37 @@
+{
+	"auth": {
+		"welcome": "Welcome",
+		"login": "Login",
+		"signup": "Sign Up"
+	},
+	"login": {
+		"welcome": "Welcome,",
+		"glad": "Glad to see you!",
+		"email": "E-mail:",
+		"emailPlaceholder": "Enter your e-mail address",
+		"password": "Password:",
+		"passwordPlaceholder": "Enter your password",
+		"forgotPassword": "Forgot Password?",
+		"dontHaveAccount": "Don't have an account? ",
+		"signUpNow": "Sign Up Now",
+		"login": "Login"
+	},
+	"signup": {
+		"emailConfirmationAlertButton": "OK",
+		"emailConfirmationAlertTitle": "Confirm your e-mail address",
+		"emailConfirmationAlertMessage": "\nWe have sent you an e-mail to confirm your e-mail address. Please check your inbox.",
+		"createAccount": "Create Account",
+		"getStarted": "to get started now!",
+		"email": "E-mail:",
+		"emailPlaceholder": "Enter your e-mail address",
+		"password": "Password:",
+		"passwordPlaceholder": "Enter your password",
+		"signUp": "Sign Up",
+		"alreadyHaveAccount": "Already have an account? ",
+		"loginNow": "Login Now"
+	},
+	"languagePicker": {
+		"changeLanguage": "Change Language",
+		"chooseLanguage": "Choose a Language"
+	}
+}

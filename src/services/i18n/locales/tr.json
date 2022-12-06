@@ -1,0 +1,37 @@
+{
+	"auth": {
+		"welcome": "Hoşgeldiniz",
+		"login": "Giriş Yap",
+		"signup": "Kayıt Ol"
+	},
+	"login": {
+		"welcome": "Hoşgeldiniz,",
+		"glad": "Sizi görmek çok güzel!",
+		"email": "E-mail:",
+		"emailPlaceholder": "E-mail adresinizi giriniz",
+		"password": "Şifre:",
+		"passwordPlaceholder": "Şifrenizi giriniz",
+		"forgotPassword": "Şifrenizi mi Unuttunuz?",
+		"dontHaveAccount": "Hesabınız yok mu? ",
+		"signUpNow": "Şimdi Kayıt Olun",
+		"login": "Giriş Yap"
+	},
+	"signup": {
+		"emailConfirmationAlertButton": "Tamam",
+		"emailConfirmationAlertTitle": "E-mail adresinizi doğrulayın",
+		"emailConfirmationAlertMessage": "\nE-mail adresinizi doğrulayabilmek için size bir mail gönderdik. Lütfen gelen kutunuzu kontrol edin.",
+		"createAccount": "Hesap Oluşturun",
+		"getStarted": "ve doğrudan başlayın!",
+		"email": "E-mail:",
+		"emailPlaceholder": "E-mail adresinizi giriniz",
+		"password": "Şifre:",
+		"passwordPlaceholder": "Şifrenizi giriniz",
+		"signUp": "Kayıt Ol",
+		"alreadyHaveAccount": "Zaten bir hesabınız mı var? ",
+		"loginNow": "Şimdi Giriş Yapın"
+	},
+	"languagePicker": {
+		"changeLanguage": "Dil değiştir",
+		"chooseLanguage": "Dil Seçiniz"
+	}
+}

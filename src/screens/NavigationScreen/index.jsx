@@ -7,6 +7,7 @@ import { useContext } from 'react'
 import AuthScreen from 'screens/AuthScreen'
 import DenemeScreen from 'screens/DenemeScreen'
 import HomeScreen from 'screens/HomeScreen'
+import LanguageScreen from 'screens/LanguageScreen'
 import LoginScreen from 'screens/LoginScreen'
 import SignupScreen from 'screens/SignupScreen'
 
@@ -26,6 +27,10 @@ const NavigationScreen = () => {
 					<Stack.Screen
 						name={USERROUTES.deneme}
 						component={DenemeScreen}
+					/>
+					<Stack.Screen
+						name={USERROUTES.language}
+						component={LanguageScreen}
 					/>
 				</Stack.Navigator>
 			</NavigationContainer>
@@ -49,6 +54,10 @@ const NavigationScreen = () => {
 					<AuthStack.Screen
 						name={AUTHROUTES.signup}
 						component={SignupScreen}
+					/>
+					<AuthStack.Screen
+						name={AUTHROUTES.language}
+						component={LanguageScreen}
 					/>
 				</AuthStack.Navigator>
 			</NavigationContainer>
