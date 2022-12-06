@@ -2,6 +2,7 @@ import { useNavigation } from '@react-navigation/native'
 import colors from 'assets/colors'
 import Button from 'components/atom/Button'
 import { AUTHROUTES } from 'constants/AuthRoutes'
+import { t } from 'i18next'
 import { useRef, useState } from 'react'
 import {
 	Alert,
@@ -68,9 +69,14 @@ const SignupScreen = () => {
 
 	const handleSignup = () => {
 		Alert.alert(
-			'Confirm your e-mail address',
-			'We have sent you an e-mail to confirm your e-mail address. Please check your inbox.',
-			[{ text: 'OK', onPress: navigateToLogin }]
+			t('signup.emailConfirmationAlertTitle'),
+			t('signup.emailConfirmationAlertMessage'),
+			[
+				{
+					text: t('signup.emailConfirmationAlertButton'),
+					onPress: navigateToLogin,
+				},
+			]
 		)
 	}
 
@@ -80,18 +86,18 @@ const SignupScreen = () => {
 				style={styles.container}
 				behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
 			>
-				<Text style={styles.titleTop}>Create Account</Text>
-				<Text style={styles.titleBottom}>to get started now!</Text>
+				<Text style={styles.titleTop}>{t('signup.createAccount')}</Text>
+				<Text style={styles.titleBottom}>{t('signup.getStarted')}</Text>
 
 				<View style={styles.labelContainer}>
-					<Text style={styles.label}>Email:</Text>
+					<Text style={styles.label}>{t('signup.email')}</Text>
 				</View>
 				<TextInput
 					value={email}
 					onChangeText={handleEmailChange}
 					style={styles.inputEmail}
 					mode={'flat'}
-					placeholder={'Email'}
+					placeholder={t('signup.emailPlaceholder')}
 					error={errorState.email}
 					activeUnderlineColor={'#8b13a1'}
 					textColor={'black'}
@@ -110,7 +116,7 @@ const SignupScreen = () => {
 					blurOnSubmit={false}
 				/>
 				<View style={styles.labelContainer}>
-					<Text style={styles.label}>Password:</Text>
+					<Text style={styles.label}>{t('signup.password')}</Text>
 				</View>
 				<TextInput
 					ref={passwordRef}
@@ -118,7 +124,7 @@ const SignupScreen = () => {
 					onChangeText={handlePasswordChange}
 					style={styles.inputPassword}
 					mode={'flat'}
-					placeholder={'Password'}
+					placeholder={t('signup.passwordPlaceholder')}
 					error={errorState.password}
 					activeUnderlineColor={'#8b13a1'}
 					textColor={'black'}
@@ -148,7 +154,7 @@ const SignupScreen = () => {
 					disabled={!email || !password}
 					style={styles.loginButton}
 				>
-					<Text style={styles.buttonText}>Sign Up</Text>
+					<Text style={styles.buttonText}>{t('signup.signUp')}</Text>
 				</Button>
 				<View style={styles.bottomButtonContainer}>
 					<TouchableOpacity
@@ -156,10 +162,10 @@ const SignupScreen = () => {
 						onPress={navigateToLogin}
 					>
 						<Text style={styles.bottomButtonText}>
-							Already have an account?{' '}
+							{t('signup.alreadyHaveAccount')}
 						</Text>
 						<Text style={styles.bottomButtonTextBold}>
-							Login Now
+							{t('signup.loginNow')}
 						</Text>
 					</TouchableOpacity>
 				</View>

@@ -3,9 +3,12 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { AUTHROUTES } from 'constants/AuthRoutes'
 import colors from 'assets/colors'
+import LanguagePicker from 'components/atom/LanguagePicker'
+import { t } from 'i18next'
 
 const AuthScreen = () => {
 	const navigation = useNavigation()
+
 	const handleLogin = () => {
 		navigation.navigate(AUTHROUTES.login)
 	}
@@ -16,6 +19,7 @@ const AuthScreen = () => {
 
 	return (
 		<View style={styles.container}>
+			<LanguagePicker />
 			<Image
 				source={require('assets/images/logo.png')}
 				style={styles.logo}
@@ -25,14 +29,14 @@ const AuthScreen = () => {
 					style={styles.button}
 					onPress={handleLogin}
 				>
-					<Text style={styles.buttonText}>Giriş Yap</Text>
+					<Text style={styles.buttonText}>{t('auth.login')}</Text>
 				</TouchableOpacity>
 				<TouchableOpacity
 					style={[styles.button, styles.signupButton]}
 					onPress={handleSignup}
 				>
 					<Text style={[styles.buttonText, styles.signupText]}>
-						Üye Ol
+						{t('auth.signup')}
 					</Text>
 				</TouchableOpacity>
 			</View>
